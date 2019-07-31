@@ -1,0 +1,19 @@
+#app{
+
+    position:fixed;
+    top:0px; left: 0px; right:0px; bottom:0px;
+
+}
+
+.square{
+
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:0px;
+    height:0px;
+    background-color:#1234AB;
+    transition: all 1s ease-out;
+    cursor:pointer;
+
+}
