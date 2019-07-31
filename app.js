@@ -97,26 +97,30 @@ let app = {
     },
     toggleMode() {
 
-        $(".square").each(function(){
+        if (this.mode) {
 
-            const conf = {
-                width: $(this).width() + "px",
-                height: $(this).height() + "px",
-            };
+            $(".square").each(function(){
 
-            $(this).css(app.positionRand(conf))
+                const conf = {
+                    width: $(this).width() + "px",
+                    height: $(this).height() + "px",
+                };
 
-        });
+                $(this).css(app.positionRand(conf))
 
-        setTimeout(() => {
+            });
 
-            if (this.mode) {
+            setTimeout(() => {
 
-                this.toggleMode();
+                if (this.mode) {
 
-            }
+                    this.toggleMode();
 
-        }, 2000)
+                }
+
+            }, 2000)
+            
+        }
 
     }
 
